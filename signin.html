@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div id="numSelecttion">
+        <input type="radio" name="number" id="number1" checked>
+        <input type="radio" name="number" id="number2">
+        <label for="number1">개인</label>
+        <label for="number2">팀</label>
+    </div>
+
+    <select>
+        <option>나라를 고르세요</option>
+        <option value="korea">한국</option>
+        <option value="foreign">외국</option>
+    </select>
+
+    <form>
+        이름 : <input type="text">
+        <div id="phone">
+            전화번호 : <input type="text">
+        </div>
+        이메일 : <input type="text">
+
+    </form>
+</body>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #number1:checked~#phone {
+        visibility: visible;
+    }
+
+    #number2:checked~#phone {
+        visibility: hidden;
+    }
+</style>
+
+
+</html>
