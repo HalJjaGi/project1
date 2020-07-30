@@ -1,94 +1,118 @@
 <!DOCTYPE html>
 <html>
 
-
-
 <head>
-
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </head>
 
-
-
 <body>
 
-    <div id="slide">
-        <input type="radio" name="pos" value="ff" id="pos1" checked>
-        <input type="radio" name="pos" value="ss" id="pos2">
-        <input type="radio" name="pos" value="tt" id="pos3">
-
-        <p class="logo">로고</p>
+    <!--네비 시작------------------------------------------------------------------------------------------------>
+    <nav>
         <div class="loginContainer">
-        <a href="#" class="login">로그인</a>
-        <a href="signin.html" class="login">참가신청</a>
-    </div>
-        <p class="pos">
-            <label for="pos1">대회소개</label>
-            <label for="pos2">공지사항</label>
-            <label for="pos3">Q&A</label>
-        </p>
-        <div class="submenuContainer">
-            <div class="submenu f">
-                <a href="#ff">첫번째</a>
-                <a href="#fs">두번째</a>
-                <a href="#ft">세번째</a>
-            </div>
-            <div class="submenu s">
-                <a href="#sf">첫번째</a>
-                <a href="#ss">두번째</a>
-                <a href="#st">세번째</a>
-            </div>
-            <div class="submenu t">
-                <a href="#tf">첫번째</a>
-                <a href="#ts">두번째</a>
-                <a href="#tt">세번째</a>
+            <!--참가신청 및 로그인-->
+            <div class="login">
+                <!--로그인-->
+                <a href="#">로그인</a>
+                <!--참가신청-->
+                <a href="../signin/index.html">참가신청</a>
             </div>
         </div>
-
-
-
+        <div class="logo">
+            <!--로고 사진이나 글자-->
+            <img src="lib/logo.jpg">
+        </div>
+        <div class="menuContainer">
+            <!--메뉴들 공지사항, 등등 각각 소메뉴 미포함-->
+            <input type="radio" name="menu" id="menu1" checked>
+            <input type="radio" name="menu" id="menu2">
+            <input type="radio" name="menu" id="menu3">
+            <label for="menu1" onclick="changeMenuLeft()">대회소개</label>
+            <label for="menu2" onclick="changeMenuCenter()">공지사항</label>
+            <label for="menu3" onclick="changeMenuRight()">Q&A</label>
+        </div>
+        <div class="upButtonContainer">
+            <i class="fas fa-angle-up fa-5x" id="upButton" onclick="up()"></i>
+        </div>
+    </nav>
+    <!--소메뉴-->
+    <div class="submenuContainer">
         <ul>
             <li>
-                <section id="ff">
-                    첫번째<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                </section>
-                <section id="fs">
-                    두번째<br><br><br><br><br><br>
-                </section>
-                <section id="ft">
-                    세번째<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                </section>
+                <a href="#intro1">첫번째</a><a href="#intro2">두번째</a><a href="#intro3">세번째</a>
             </li>
             <li>
-                <section id="sf">
-                    첫번째<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                </section>
-                <section id="ss">
-                    두번째<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                </section>
-                <section id="st">
-                    세번째<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                </section>
+                <a href="#no1">일번째</a><a href="#no2">이번째</a><a href="#no3">삼번째</a>
             </li>
             <li>
-                <section id="tf">
-                    첫번째<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <a href="#QNA1">one번째</a><a href="#QNA2">two번째</a><a href="#QNA3">three번째</a>
+            </li>
+        </ul>
+    </div>
+    <!--네비 끝------------------------------------------------------------------------------------------------>
+    <!--내용 시작------------------------------------------------------------------------------------------------>
+    <div class="contentContainer">
+        <ul>
+            <li id="introduction">
+                <!--대회소개-->
+                <section id="intro1">
+                    첫번째<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 </section>
-                <section id="ts">
-                    두번째<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <section id="intro2">
+                    두번째<br><br><br><br><br><br><br><br><br><br>
                 </section>
-                <section id="tt">
-                    세번째<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <section id="intro3">
+                    세번째<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </section>
+            </li>
+            <li id="notice">
+                <!--공지사항-->
+                <section id="no1">
+                    일번째<br><br><br><br><br><br><br><br><br><br>
+                </section>
+                <section id="no2">
+                    이번째<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </section>
+                <section id="no3">
+                    삼번째<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </section>
+            </li>
+            <li id="QNA">
+                <!--Q&A-->
+                <section id="QNA1">
+                    one번째<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    
+                    <div class="questionContainer">
+                        <div class="question">질문 아야아야어여오요?</div>
+                        <div class="answer"><i class="fas fa-level-up-alt fa-rotate-90"></i>대답 가나다라마바사아</div>
+                    </div>
+
+                    <br><br><br><br><br><br><br><br><br><br>
+                </section>
+                <section id="QNA2">
+                    two번째<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </section>
+                <section id="QNA3">
+                    three번째<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 </section>
             </li>
         </ul>
     </div>
+    <!--내용 끝------------------------------------------------------------------------------------------------>
 
 </body>
-
 <script src="app.js"></script>
 
-
 </html>
+
+
+<!--TODO: Q&A 내용물-->
+<!--TODO: 공지사항 내용물-->
+<!--TODO: 다국어지원-->
+
+<!--TODO: 참가신청-->
+<!--TODO: 로그인-->
+<!--TODO: 관리자 페이지 내용물-->
