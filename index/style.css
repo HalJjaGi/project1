@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    scroll-behavior: smooth;
+}
+
+ul, li {
+    list-style: none;
+}
+
+
+/*네비 -----------------------------------------------*/
+
+nav {
+    display: flex;
+}
+
+
+/*로그인------------------------------------*/
+
+.loginContainer {
+    flex: 1;
+}
+
+.login {
+    width: calc(100vw/3);
+    text-align: center;
+    vertical-align: center;
+    line-height: calc(200px/512*229);
+}
+
+.login a {
+    width: max-content;
+    margin: 0 40px 0 40px;
+    text-decoration: none;
+    color: rgb(224, 207, 55);
+    font-size: 20px;
+    border: 3px;
+    border-style: solid;
+    padding: 3px;
+    transition: 0.3s;
+}
+
+
+.login a:hover {
+    opacity: 0.5;
+}
+
+/*로고------------------------------------*/
+
+.logo {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.logo img{
+    width: 200px;
+    height: auto;
+}
+
+
+
+
+/*메뉴------------------------------------*/
+
+.menuContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuContainer input {
+    display: none;
+}
+
+.menuContainer label {
+    cursor: pointer;
+    margin: 0 20px 0 20px;
+    font-size: 20px;
+    color: rgb(224, 207, 55);
+    border: 3px;
+    border-style: solid;
+    padding: 3px;
+    transition: 0.3s;
+}
+
+
+
+.menuContainer label:hover {
+    opacity: 0.5;
+}
+
+
+
+
+
+.submenuContainer {
+    position: absolute;
+    right: 0;
+    top: calc(200px/512*229 + 10px);
+    width: calc(100%/3);
+    overflow: hidden;
+}
+
+
+.submenuContainer ul {
+    display: flex;
+    width: 300%;
+    transition: 0.3s;
+}
+
+.submenuContainer li {
+    width: calc(100%/3);
+    text-align: center;
+    font-size: 20px;
+}
+
+.submenuContainer li a {
+    margin: 0 30px 0 30px;
+    transition: 0.3s;
+}
+
+
+
+
+
+.submenuContainer li a:hover {
+    opacity: 0.5;
+}
+
+
+
+
+#upButton {
+    position: fixed;
+    right: 4vw;
+    bottom: 2vw;
+    cursor: pointer;
+}
+
+
+
+
+.left {
+    margin-left: 0;
+}
+
+.center {
+    margin-left: -100%;
+}
+
+.right {
+    margin-left: -200%;
+}
+
+.scroll-pinned {
+    position: fixed;
+    top: 10px;
+}
+
+.display {
+    width: max-content;
+    height: max-content;
+}
+
+
+/*내용 -----------------------------------------------*/
+
+.contentContainer {
+    height: max-content;
+    overflow: hidden;
+}
+
+.contentContainer ul {
+    display: flex;
+    width: 300%;
+    background-color: aqua;
+    transition: 0.3s;
+}
+
+.contentContainer ul li {
+    width: calc(100%/3);
+}
+
+/*대회소개------------------------------------*/
+
+
+
+
+
+
+/*Q&A------------------------------------*/
+
+
+.questionContainer {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 70vw;
+}
+
+.questionContainer .qTitle {
+    width: 100%;    
+    border: 2px;
+    border-style: solid;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+.questionContainer .qTitle h1 {
+    font-size: 3vw;
+    margin-left: 15px;
+    flex: 5;
+}
+
+.questionContainer .qTitle .arrowContainer {
+    flex: 1;
+    text-align: right;
+}
+
+.questionContainer .qTitle .arrowContainer i {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.questionContainer .qContent {
+    flex-direction: column;
+}
+
+.questionContainer .qContent h2 {
+    font-size: 1vw;
+    margin-left: 17px;
+}
+
+.questionContainer .qContent p {
+    font-size: 1.5vw;
+    margin-left: 17px;
+}
+
+table {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    margin-top: 30px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+tr {
+    width: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+td {
+    width: max-content;
+}
+
+tr:hover {
+    opacity: 0.5;
+}
+
+@media only screen and (max-width : 1200px) {
+
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 20vw;
+        transform: translateX(0);
+        margin: 0;
+    }
+
+    .login a {
+        font-size: 2vw;
+        margin: 0 1vw 0 1vw;
+    }
+
+    .menuContainer label{
+        font-size: 2vw;
+        margin: 0 1vw 0 1vw;
+    }
+
+    .submenuContainer {
+        top: calc(20vw/512*229 + 1.5vw);
+    }
+
+    .submenuContainer li a {
+        margin: 0 1vw 0 1vw;
+        font-size: 2vw;
+    }
+
+    .notice table {
+        font-size: 3vw;
+    }
+}
+
+
+
+@media only screen and (max-device-width : 768px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    .loginContainer {
+        position: absolute;
+        top: 5vw;
+    }
+
+    .login a {
+        font-size: 3vw;
+    }
+
+    .logo img {
+        width: 40vw;
+    }
+
+    .menuContainer {
+        margin: 3vw 0 3vw 0;
+    }
+
+    .menuContainer label {
+        font-size: 3vw;
+    }
+
+    .submenuContainer {
+        top: calc(40vw/512*229 + 12vw);
+        right: 50vw;
+        transform: translateX(50%);
+    }
+
+    .submenuContainer li a {
+        font-size: 2.5vw;
+    }
+
+    .scroll-pinned {
+        position: fixed;
+        top: 2vw;
+    }
+
+    .contentContainer {
+        margin-top: 8vw;
+    }
+
+    table {
+        font-size: 4vw;
+    }
+}

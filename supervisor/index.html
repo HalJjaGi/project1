@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <nav>
+        <span>공지사항</span>
+        <span>Q&A</span>
+        <span>통계</span>
+        <span>유저관리</span>   
+    </nav>
+    <div class="contentContainer">
+        <div id="notice">
+            <table>
+                <tr>
+                    <th>게시글 번호</th>
+                    <th>제목</th>
+                    <th>시간</th>
+                </tr>
+                <tr onClick="location.href='notice.html'">
+                    <td>4</td>
+                    <td>사사사 공지qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq</td>
+                    <td>2020.05.10</td>
+                </tr>
+                <tr onClick="location.href='notice.html'">
+                    <td>3</td>
+                    <td>라라라 공지</td>
+                    <td>2020.05.07</td>
+                </tr>
+                <tr onClick="location.href='notice.html'">
+                    <td>2</td>
+                    <td>바바바 공지</td>
+                    <td>2020.05.04</td>
+                </tr>
+                <tr onClick="location.href='notice.html'">
+                    <td>1</td>
+                    <td>아아아 공지</td>
+                    <td>2020.05.03</td>
+                </tr>
+            </table>
+        </div>
+        <div id="qna">
+            <table>
+                <tr>
+                    <td>질문 제목</td>
+                    <td>답변 유무</td>
+                </tr>
+                <tr>
+                    <td>질문 제목</td>
+                    <td>답변 유무</td>
+                </tr>
+                <tr>
+                    <td>질문 제목</td>
+                    <td>답변 유무</td>
+                </tr>
+            </table>
+        </div>
+        <div id="graph">
+            <div id="chart_div" style="width: 500px;"></div>
+        </div>
+        <div id="user">
+            <!--삭제, 수정, 조회-->
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!--각종 그래프들, 유저관리, 공지사항, Q&A-->

@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;  
+    align-items: center;
+    flex-direction: column;
+}
+
+form input {
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+button {
+    font-size: 40px;
+    margin: 20px 0 20px 0;
+}

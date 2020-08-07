@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    background-color: blue;
+}
+
+nav span {
+    margin: 10px 20px 10px 20px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+nav span:hover {
+    opacity: 0.5;
+}
+
+#notice {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    width: max-content;
+}
+
+#notice table {
+    table-layout: fixed;
+    width: 1400px;
+}
+
+#notice table tr {
+    cursor: pointer;
+}
+
+#notice table tr:hover {
+    opacity: 0.5;
+}
+
+#notice table td {
+    text-align: center;
+    font-size: 30px;
+    padding: 5px 10px 5px 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}   
+
+#notice table td button {
+    font-size: 30px;
+}
+
+#qna table {
+    table-layout: fixed;
+    width: 1400px;
+}
+
+#qna table tr {
+    cursor: pointer;
+}
+
+#qna table tr:hover {
+    opacity: 0.5;
+}
+
+#qna table td {
+    text-align: center;
+    font-size: 30px;
+    padding: 5px 10px 5px 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

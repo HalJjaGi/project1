@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <nav>
+        <div class="loginContainer">
+            <!--참가신청 및 로그인-->
+            <div class="login">
+                <!--로그인-->
+            </div>
+        </div>
+        <div class="logo" onclick="location.href='../index/index.html'">
+            <!--로고 사진이나 글자-->
+            <img src="../index/lib/logo.jpg">
+        </div>
+        <div class="menuContainer">
+            <!--메뉴들 공지사항, 등등 각각 소메뉴 미포함-->
+        </div>
+    </nav>
+    <div id="contentContainer">
+        <form>
+            <select>
+                <option>수정할 사람</option>
+            </select>
+            <select>
+                <option>수정할 정보</option>
+            </select>
+            <input type="text">
+            <button>수정하기</button>
+        </form>
+        <button onclick="history.back()">뒤로가기</button>
+    </div>
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+        scroll-behavior: smooth;
+    }
+
+    ul,
+    li {
+        list-style: none;
+    }
+
+
+    /*네비 -----------------------------------------------*/
+
+    nav {
+        display: flex;
+    }
+
+
+    /*로그인------------------------------------*/
+
+    .loginContainer {
+        flex: 1;
+    }
+
+    .login {
+        width: calc(100vw/3);
+        text-align: center;
+        vertical-align: center;
+        line-height: calc(200px/512*229);
+    }
+
+    .login a {
+        width: max-content;
+        margin: 0 40px 0 40px;
+        text-decoration: none;
+        color: rgb(224, 207, 55);
+        font-size: 20px;
+        border: 3px;
+        border-style: solid;
+        padding: 3px;
+        transition: 0.3s;
+    }
+
+
+    .login a:hover {
+        opacity: 0.5;
+    }
+
+    /*로고------------------------------------*/
+
+    .logo {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 200px;
+        height: auto;
+        cursor: pointer;
+    }
+
+
+
+
+    /*메뉴------------------------------------*/
+
+    .menuContainer {
+        display: flex;
+        flex: 1;
+    }
+
+
+
+
+
+
+    #contentContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    #contentContainer button {
+        font-size: 25px;
+        margin: 10px 0 10px 0;
+    }
+
+    #contentContainer form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    #contentContainer form select {
+        font-size: 25px;
+        margin-top: 20px;
+    }
+
+    #contentContainer form input {
+        font-size: 25px;
+        margin-top: 20px;
+    }
+</style>
+
+</html>
